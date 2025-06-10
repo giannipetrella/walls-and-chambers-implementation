@@ -23,9 +23,7 @@ Install QuiverTools by running the following commands, in the given order.
 ```julia
 julia> using Pkg
 
-julia> Pkg.add(url="https://github.com/pseudoeffective/SchubertPolynomials.jl", rev="main");
-
-julia> Pkg.add(url="https://github.com/QuiverTools/QuiverTools.jl", rev="schubert-polynomials");
+julia> Pkg.add(url="https://github.com/QuiverTools/QuiverTools.jl");
 ```
 
 Now install Oscar and Memoize by running

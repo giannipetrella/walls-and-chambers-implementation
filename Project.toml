@@ -1,0 +1,5 @@
+[deps]
+Memoize = "c03570c3-d221-55d1-a50c-7939bbd78826"
+Oscar = "f1435218-dba5-11e9-1e4d-f1a5fab5fc13"
+QuiverTools = "dc2e10be-62a3-4315-9c95-46bb97ac152d"
+Serialization = "9e88b42a-f829-5b0c-bbe9-9e923198166b"
