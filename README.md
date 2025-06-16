@@ -34,15 +34,15 @@ julia> Pkg.add("Oscar"); Pkg.add("Memoize");
 To run the script, close the Julia REPL with `Ctrl+D` and run the following command in the shell:
 
 ```bash
-julia --project=. walls-and-chambers.jl
+julia --project=. examples.jl
 ```
 
 This is configured by default to reproduce the computations for the Segre cubic.
 You can use this code to experiment on any other example by importing it in an interactive
-session; do so by launching a REPL and running
+session; do so by launching a REPL (with `julia --project=.`) and running
 
 ```julia
-julia> import("walls-and-chambers.jl")
+julia> include("walls-and-chambers.jl")
 ```
 
 ### How to set up the Sagemath environment
