@@ -7,9 +7,6 @@ using Serialization
 
 Compute whether `e` is a special subdimension vector of `d` for `Q`.
 
-This is an implementation of [TODO cite proposition] in [TODO cite paper].
-
-
 # Example
 
 ```jldoctests
@@ -352,3 +349,4 @@ function git_equivalent(Q, d, theta1, theta2)
         for w in vgit_walls(Q, d; top_dimension=false)
     )
 end
+;

@@ -23,12 +23,18 @@ Install QuiverTools by running the following commands, in the given order.
 ```julia
 julia> using Pkg
 
-julia> Pkg.add(url="https://github.com/QuiverTools/QuiverTools.jl");
+julia> Pkg.add(url="https://github.com/QuiverTools/QuiverTools.jl", rev="f1647cc");
 ```
 
 Now install Oscar and Memoize by running
 ```julia
 julia> Pkg.add("Oscar"); Pkg.add("Memoize");
+```
+
+To save raw computation results, install Serialization.jl via
+
+```julia
+julia> Pkg.add("Serialization")
 ```
 
 To run the script, close the Julia REPL with `Ctrl+D` and run the following command in the shell:
