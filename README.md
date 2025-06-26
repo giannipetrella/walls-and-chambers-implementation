@@ -1,7 +1,8 @@
 # Walls and chambers for quiver moduli
 
 This repository is part of the paper "Finding the walls for quiver moduli"
-by Hans Franzen, Gianni Petrella and Rachel Webb.
+by Hans Franzen, Gianni Petrella and Rachel Webb,
+[arXiv:2506.20568](https://arxiv.org/abs/2506.20568).
 
 This code can be used, among other things, to verify every example in the paper.
 
