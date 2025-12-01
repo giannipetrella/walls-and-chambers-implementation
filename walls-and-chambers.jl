@@ -53,7 +53,7 @@ function is_special_subdimension_vector(Q::Quiver, e::AbstractVector{Int}, d::Ab
     )
 end
 """
-    all_subdimension_vectors(Q::Quiver, d::AbstractVector{Int})
+    all_special_subdimension_vectors(Q::Quiver, d::AbstractVector{Int})
 
 Compute all the special subdimension vectors of `d` for the quiver `Q`.
 
@@ -125,11 +125,13 @@ julia> collect(rays(sst(Q, d)))
 end
 
 """
-    vgit_walls(Q, d; top_dimension=true)
+    vgit_walls(Q, d; inner=false, top_dimension=true)
 
 Compute all the walls `W_e` of the quiver `Q` with dimension vector `d`.
 Defaults to only computing the top-dimensional walls, pass
 the `top_dimension=false` keyword to compute all the `W_e` of the VGIT problem.
+Defaults to computing all walls, pass the `inner=true` keyword
+to not include the outer walls.
 
 # Example
 
@@ -159,11 +161,14 @@ julia> map(rays, vgit_walls(Q, d; inner=false, top_dimension=false))
 end
 
 """
-    wall_system(Q, d; inner=false)
+    wall_system(Q, d; inner=false, as_cones=true)
 
 Compute the wall system for the quiver `Q` with dimension vector `d`.
 This is the set of hyperplanes `H_e` for which there exists at least one
 vgit wall `W_e` that lays on `H_e`.
+By default it returns the walls intersected with the semistable cone `sst(d)`,
+pass the keyword `as_cones=false` to get the full hyperplanes.
+
 """
 function wall_system(Q, d; inner=false, as_cones=true)
     sstd = sst(Q, d)
@@ -320,7 +325,7 @@ end
 
 
 """
-    vgit_fan(Q, d)
+    vgit_fan(Q, d; verbose=false)
 
 Compute the VGIT fan for the quiver `Q` with dimension vector `d`.
 """
@@ -337,7 +342,7 @@ end
     git_equivalent(Q, d, theta1, theta2)
 Check if the two stability parameters `theta1` and `theta2` are equivalent.
 
-By [TODO cite paper], this is equivalent to their convex hull
+By [Corollary 4.4, arXiv:2506.20568], this is equivalent to their convex hull
 either lying in a wall or not intersecting any of them.
 """
 function git_equivalent(Q, d, theta1, theta2)
